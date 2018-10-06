@@ -1,11 +1,11 @@
 ## Data Dictionary 
-##### Description of data: 
-##### Main Source: www.basketball-reference.com
-##### Data Source for GS Warriors https://www.basketball-reference.com/teams/GSW/2018.html
-##### Number of observations: 477
-##### Number of variables: 42 
+##### **Main Source**: http://www.basketball-reference.com
+##### **Data Source for GS Warriors**: https://www.basketball-reference.com/teams/GSW/2018.html
+##### **Description of data**: The data displays key statistics of NBA players
+##### **Number of observations**: 477
+##### **Number of variables**: 42 
 
-#### Variables
+### **Variables**
 * **player**: First and last names of player 
 * **number**: Number on jersey 
 * **team**: 3-letter team abbreviation 

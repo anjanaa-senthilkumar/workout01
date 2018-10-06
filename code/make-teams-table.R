@@ -1,27 +1,24 @@
 # ==================================================
 #Title: Workout1- Data Wrangling and Visualization
-#Description:
-#Input: nba2018.csv
-#Output:
+#Description: Data preparation for analyzing key
+#             statistics by teams
+#Input:  nba2018.csv
+#Output: nba2018-teams.csv, teams-summary.txt,
+#        efficiency-summary.txt
 # ===================================================
-
-knitr::opts_chunk$set(echo = TRUE, fig.path = '../report/')
 
 library(dplyr)
 library(ggplot2)
-library(readr)
-library(plyr)
-library(data.table)
+
 
 nba <- read.csv('C:\\Users\\anjan\\Desktop\\workout01\\data\\nba2018.csv')
 
 # 4) Data Preparation
+
+# experience variable
 nba$experience <- as.character(nba$experience)
 nba$experience[which(nba$experience=="R")] <- "0"
 nba$experience <- as.integer(nba$experience)
-
-
-# experience variable
 
 # salary variable
 nba$salary <- nba$salary /1000000
@@ -63,45 +60,10 @@ teams <- summarise(
                 efficiency = sum(efficiency)
        )
 
-sink(file = '../data/teams-summary.txt')
+sink(file = '../output/teams-summary.txt')
 summary(teams)
 sink()
 
 
 write.csv(teams,file= '../data/nba2018-teams.csv', row.names = FALSE)
 
-# 5) Ranking of Teams
-
-team_ranks <- arrange(select(teams,team,salary), desc(salary))
-gg_salary <- ggplot(team_ranks, aes(x=reorder(team, salary), y=salary))+
-            geom_bar(stat = 'identity')+
-            geom_hline(yintercept = mean(team_ranks$salary), color= "red") + 
-            labs(x="Team", y="Salary (in millions)", title = "NBA Team ranked by Total Salary")+
-            coord_flip()
-         
-
-
-
-team_points <- arrange(select(teams,team,points), desc(points))
-gg_points <- ggplot(team_points, aes(x=reorder(team, points), y=points))+
-  geom_bar(stat = 'identity')+
-  geom_hline(yintercept = mean(team_points$points), color="red") +
-  labs(x="Team", y="Total Points)", title = "NBA Team ranked by Total Points")+
-  coord_flip() 
-  
-team_efficiency <- arrange(select(teams,team,efficiency), desc(efficiency))
-gg_efficiency <- ggplot(team_efficiency, aes(x=reorder(team,efficiency), y=efficiency))+
-  geom_bar(stat = 'identity')+
-  geom_hline(yintercept = mean(team_efficiency$efficiency), color="red") +
-  labs(x="Team", y="Total Efficiency)", title = "NBA Team ranked by Total Efficiency")+
-  coord_flip() 
-
-team_experience <- arrange(select(teams,team,experience), desc(experience))
-gg_experience <- ggplot(team_experience, aes(x=reorder(team,experience), y=experience))+
-  geom_bar(stat = 'identity')+
-  geom_hline(yintercept = mean(team_experience$experience), color="red") +
-  labs(x="Team", y="Total Experience (in years)", title = "NBA Team ranked by Total Experience")+
-  coord_flip() 
-
-
-       
