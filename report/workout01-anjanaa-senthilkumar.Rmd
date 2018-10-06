@@ -71,4 +71,4 @@ gg_experience
 * Learning to use ggplot and figuring out the syntax to display graphs in different ways was the most time consuming.
 * This assignment was not easy. I had a difficult time fully grasping how to get everything onto github.
 * No one helped me complete this assignment. 
-* It took me approximately seven hours to commplete this assignment. 
+* It took me approximately seven hours to complete this assignment. 
