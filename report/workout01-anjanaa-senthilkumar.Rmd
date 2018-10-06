@@ -19,7 +19,7 @@ team_ranks <- arrange(select(teams,team,salary), desc(salary))
 gg_salary <- ggplot(team_ranks, aes(x=reorder(team, salary), y=salary))+
             geom_bar(stat = 'identity')+
             geom_hline(yintercept = mean(team_ranks$salary), color= "red") + 
-            labs(x="Team", y="Salary (in millions)", title = "NBA Team ranked by Total Salary")+
+            labs(x="Team", y="Salary ($ in millions)", title = "NBA Team ranked by Total Salary")+
             coord_flip()
 
 gg_salary
@@ -31,7 +31,7 @@ team_points <- arrange(select(teams,team,points), desc(points))
 gg_points <- ggplot(team_points, aes(x=reorder(team, points), y=points))+
   geom_bar(stat = 'identity')+
   geom_hline(yintercept = mean(team_points$points), color="red") +
-  labs(x="Team", y="Total Points)", title = "NBA Team ranked by Total Points")+
+  labs(x="Team", y="Total Points", title = "NBA Team ranked by Total Points")+
   coord_flip() 
 
 gg_points
@@ -43,7 +43,7 @@ team_efficiency <- arrange(select(teams,team,efficiency), desc(efficiency))
 gg_efficiency <- ggplot(team_efficiency, aes(x=reorder(team,efficiency), y=efficiency))+
   geom_bar(stat = 'identity')+
   geom_hline(yintercept = mean(team_efficiency$efficiency), color="red") +
-  labs(x="Team", y="Total Efficiency)", title = "NBA Team ranked by Total Efficiency")+
+  labs(x="Team", y="Total Efficiency", title = "NBA Team ranked by Total Efficiency")+
   coord_flip() 
 
 gg_efficiency
