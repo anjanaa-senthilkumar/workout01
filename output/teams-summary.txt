@@ -1,0 +1,56 @@
+      team      experience    
+ ATL    : 1   Min.   : 39.00  
+ BOS    : 1   1st Qu.: 59.00  
+ BRK    : 1   Median : 67.50  
+ CHI    : 1   Mean   : 74.13  
+ CHO    : 1   3rd Qu.: 83.00  
+ CLE    : 1   Max.   :145.00  
+ (Other):24                   
+     salary          points3      
+ Min.   : 56.29   Min.   : 519.0  
+ 1st Qu.: 85.59   1st Qu.: 620.0  
+ Median : 92.72   Median : 718.0  
+ Mean   : 92.30   Mean   : 737.8  
+ 3rd Qu.:102.92   3rd Qu.: 805.8  
+ Max.   :127.25   Max.   :1140.0  
+                                  
+    points2        points1         points    
+ Min.   :1754   Min.   : 998   Min.   :6360  
+ 1st Qu.:2104   1st Qu.:1240   1st Qu.:7906  
+ Median :2290   Median :1426   Median :8240  
+ Mean   :2263   Mean   :1375   Mean   :8114  
+ 3rd Qu.:2458   3rd Qu.:1495   3rd Qu.:8611  
+ Max.   :2638   Max.   :1623   Max.   :9491  
+                                             
+  off_rebounds    def_rebounds 
+ Min.   :521.0   Min.   :1876  
+ 1st Qu.:711.0   1st Qu.:2455  
+ Median :780.0   Median :2600  
+ Mean   :776.9   Mean   :2552  
+ 3rd Qu.:863.0   3rd Qu.:2692  
+ Max.   :962.0   Max.   :2869  
+                               
+    assists         steals     
+ Min.   :1183   Min.   :483.0  
+ 1st Qu.:1551   1st Qu.:543.0  
+ Median :1753   Median :591.5  
+ Mean   :1744   Mean   :588.9  
+ 3rd Qu.:1882   3rd Qu.:626.8  
+ Max.   :2486   Max.   :782.0  
+                               
+     blocks        turnovers     
+ Min.   :232.0   Min.   : 674.0  
+ 1st Qu.:318.2   1st Qu.: 972.8  
+ Median :357.5   Median :1029.5  
+ Mean   :363.0   Mean   :1025.0  
+ 3rd Qu.:392.5   3rd Qu.:1100.5  
+ Max.   :554.0   Max.   :1212.0  
+                                 
+     fouls        efficiency   
+ Min.   :1168   Min.   :131.5  
+ 1st Qu.:1444   1st Qu.:144.1  
+ Median :1567   Median :148.0  
+ Mean   :1519   Mean   :152.3  
+ 3rd Qu.:1620   3rd Qu.:160.6  
+ Max.   :1887   Max.   :182.1  
+                               
